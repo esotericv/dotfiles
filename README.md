@@ -19,5 +19,3 @@ rofi - app launcher
 
 swww - wallpaper daemon
 ```
-
-```
