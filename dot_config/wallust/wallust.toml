@@ -1,0 +1,23 @@
+backend = "wal" #original is full, options are wal and full
+palette = "dark16" #orignal is dark, options are dark and dark16
+color_space = "lchmixed"
+# check_contrast = true
+
+[templates]
+hypr.template = "hypr.conf"
+hypr.target = "~/.config/hypr/colors.conf"
+
+rofi.template = "rofi.rasi"
+rofi.target = "~/.config/rofi/shared/colors.rasi"
+
+swaync.template = "swaync.css"
+swaync.target = "~/.config/swaync/colors.css"
+
+waybar.template = "waybar.css"
+waybar.target = "~/.config/waybar/colors.css"
+
+eww.template = "eww.scss"
+eww.target = "~/.config/eww/colors.scss"
+
+kitty.template = "kitty.conf"
+kitty.target = "~/.config/kitty/wallust-colors.conf"
