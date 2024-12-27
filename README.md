@@ -2,7 +2,7 @@
 
 repo for my dotfiles
 
-pictures coming soon
+![alt text](https://github.com/achi-0/dotfiles/images/sample.png?raw=true)
 
 ## Dependencies for hyprland
 
