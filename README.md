@@ -2,7 +2,7 @@
 
 repo for my dotfiles
 
-![image](https://github.com/achi-0/dotfiles/images/sample.png)
+![image](https://github.com/achi-0/dotfiles/blob/main/images/sample.png)
 
 ## Dependencies for hyprland
 
