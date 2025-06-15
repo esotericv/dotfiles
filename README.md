@@ -13,7 +13,7 @@ waybar
 ## Hypr ecosystem
 hyprshot 
 
-hyprpicker 
+hyprpicker
 
 hyprlock
 
