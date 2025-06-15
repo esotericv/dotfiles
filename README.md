@@ -39,6 +39,7 @@ mpdscribble - (optional) last.fm scrobbling for mpd
 uwsm - universal wayland session manager, allows systemd services to run properly
 
 qt6ct-kde - configure qt6 themes (kde variant is patched to work with kde apps)
+
 ## Userspace apps 
 yazi - tui file explorer
 
