@@ -13,18 +13,21 @@
     "modules-left": [
         "custom/sysicon",
         "hyprland/workspaces",
+        "niri/workspaces",
         /* "hyprland/mode",
         "hyprland/scratchpad", */
         "custom/media"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/window",
+        "niri/window"
     ],
     "modules-right": [
         "mpd",
         //"tray",
         "group/expandable-tray",
         //"idle_inhibitor",
+        "bluetooth",
         "pulseaudio",
         "network",
         /*"power-profiles-daemon",
@@ -58,6 +61,13 @@
              "default": ""
          } */
      },
+
+    "niri/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": false,
+      "warp-on-scroll": false,
+    },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -79,7 +89,7 @@
     },
     "mpd": {
         // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format": "{stateIcon} {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
         "format-disconnected": "Disconnected ",
         // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "format-stopped": "",
@@ -122,7 +132,7 @@
         // 12 hour time, delete format line for 24 hour time
         "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y/%m/%d}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -226,8 +236,8 @@
 		  "menu-actions": {
 			  "shutdown": "shutdown",
 			  "reboot": "reboot",
-        //"lock": "hyprlock",
-        "lock": "loginctl lock-session",
+        "lock": "hyprlock",
+        //"lock": "loginctl lock-session",
         "logout": "hyprctl dispatch exit",
 		}
 
@@ -274,6 +284,7 @@
     "custom/sysicon": {
       "format": "󰣇",
       "tooltip": "false",
+      "on-click": "pgrep fuzzel > /dev/null 2>&1 && killall fuzzel || fuzzel",
     },
 
     "custom/expandable-tray": {
@@ -292,5 +303,29 @@
           "custom/expandable-tray",
           "tray",
         ]
+    },
+
+    "bluetooth": {
+        "format": "󰂰",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+        "format-connected-battery": "󰂱",
+
+        "tooltip-format":
+        "{num_connections} connected",
+        "tooltip-format-disabled":
+        "Bluetooth Disabled",
+        "tooltip-format-connected":
+        "{num_connections} connected\n{device_enumerate}",
+        "tooltip-format-enumerate-connected":
+        "{device_alias}",
+        "tooltip-format-enumerate-connected-battery":
+        "{device_alias}: {device_battery_percentage}%",
+
+        "on-click": "bluedevil-wizard",
+        "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
+        "interval": 1,
+        "min-length": 1,
+        "max-length": 1
     }
 }

@@ -21,3 +21,6 @@ eww.target = "~/.config/eww/colors.scss"
 
 kitty.template = "kitty.conf"
 kitty.target = "~/.config/kitty/wallust-colors.conf"
+
+rmpc.template = "rmpc.ron"
+rmpc.target = "~/.config/rmpc/themes/wallust.ron"

@@ -3,7 +3,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
-    font-family: Mononoki Nerd Font, Noto, sans-serif;
+    font-family: Maple Mono, Noto, sans-serif;
     font-size: 13px;
 
     color: @FOREGROUND;
@@ -74,7 +74,7 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: @color9;
+    background-color: transparent;
 }
 
 #workspaces button {
@@ -217,7 +217,8 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
+  background-color: transparent;
 }
 
 #pulseaudio {
@@ -288,8 +289,8 @@ label:focus {
 #mpd {
     /* background-color: #66cc99;
     color: #2a5c45; */
-    background-color: @color4;
-    color: @color2;
+    background-color: transparent;
+    color: @color6;
 }
 
 #mpd.disconnected {
@@ -298,12 +299,14 @@ label:focus {
 
 #mpd.stopped {
     /* background-color: #90b1b1; */
-  background-color: @color0;
+  background-color: transparent;
+  color: @color1
 }
 
 #mpd.paused {
     /* background-color: #51a37a; */
-  background-color: @color3;
+  background-color: @transparent;
+  color: @color6
 }
 
 #language {
@@ -357,4 +360,8 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#bluetooth {
+  color: @ffffff
 }
